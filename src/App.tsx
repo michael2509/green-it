@@ -1,5 +1,6 @@
 import { Component, lazy } from "solid-js";
 import { Route, Routes } from "@solidjs/router";
+import Footer from "./components/footer/Footer";
 
 import Navbar from "./components/Navbar";
 
@@ -16,6 +17,7 @@ const App: Component = () => {
           element={<div>This site was made with Solid</div>}
         />
       </Routes>
+      <Footer></Footer>
     </>
   );
 };
