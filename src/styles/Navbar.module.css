@@ -1,0 +1,28 @@
+.Navbar {
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Lato', sans-serif;
+}
+
+.Navbar a {
+  display: flex;
+  text-decoration: none;
+}
+
+.Navbar img {
+  width: 200px;
+}
+
+.NavbarList {
+  display: inline-flex;
+  list-style: none;
+}
+
+.NavbarList a {
+  font-size: 20px;
+  margin: 0 20px;
+  color: black;
+}
+
