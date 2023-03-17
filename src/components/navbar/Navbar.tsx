@@ -1,6 +1,6 @@
 import { Component } from "solid-js";
-import styles from "../styles/Navbar.module.css";
-import brandLogo from "../assets/chopard-logo.webp";
+import styles from "./Navbar.module.css";
+import brandLogo from "../../assets/chopard-logo.webp";
 
 const Navbar: Component = () => {
   return (
