@@ -13,3 +13,8 @@ body {
   line-height: 1.5;
   color: #333;
 }
+
+/* Global CSS Variables */
+:root {
+  --main-color: #50AF31;
+}
