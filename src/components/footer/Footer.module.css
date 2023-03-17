@@ -7,39 +7,39 @@
     padding: 20px 40px;
 }
 
-.car-dealer-infos {
+.carDealerInfos {
     display: flex;
 }
 
-.car-dealer-presentation {
+.carDealerPresentation {
     text-align: right;
 }
 
-.car-dealer-location,
-.car-dealer-presentation {
+.carDealerLocation,
+.carDealerPresentation {
     width: 50%;
 }
 
-.car-dealer-social-media {
+.carDealerSocialMedia {
     margin: 20px 0;
 }
 
-.social-media-list {
+.socialMediaList {
     display: flex;
     list-style: none;
     padding-left: 0;
 }
 
-.social-media-icon {
+.socialMediaIcon {
     border-radius: 50%;
     background: #fff !important;
     box-shadow: none !important;
     color: initial;
-    padding: 0.5em 0.65em;
+    padding: 0.6em 0.65em;
     margin-right: 7px;
 }
 
-.icon-img {
+.iconImg {
     height: 16px;
     width: 16px;
 }
@@ -53,16 +53,16 @@ footer span {
 }
 
 @media screen and (max-width: 768px) {
-    .car-dealer-infos {
+    .carDealerInfos {
         display: block;
     }
 
-    .car-dealer-location,
-    .car-dealer-presentation {
+    .carDealerLocation,
+    .carDealerPresentation {
         width: 100%;
     }
 
-    .car-dealer-presentation {
+    .carDealerPresentation {
         text-align: left;
         margin-bottom: 20px;
     }
