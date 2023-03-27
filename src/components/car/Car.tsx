@@ -75,8 +75,15 @@ const Car: Component = () => {
   }
 
   return (
-    <div class={styles.car}>
-      <section>
+    <>
+      <section
+        class={styles.carSection}
+        style={{
+          // tricks for sticky footer
+          "min-height": "75vh",
+          "align-items": "center",
+        }}
+      >
         {/* TODO 🛠️: Use a optimized carousel to display all images WITH LAZY LOADING!! */}
         <img
           src={`/src/assets/cars/${car()?.images[0]}`}
@@ -93,7 +100,11 @@ const Car: Component = () => {
           <p class={styles.carPrice}>{car()?.price}€</p>
         </article>
       </section>
-    </div>
+      <section class={styles.carBreadcrumbs}>
+        <button class={styles.carBreadcrumbsButton}>Plus d'infos</button>
+        <button class={styles.carBreadcrumbsButton}>Demande de devis</button>
+      </section>
+    </>
   );
 };
 
