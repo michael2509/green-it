@@ -1,0 +1,26 @@
+.primaryBtn {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    outline: 0;
+    border: 0;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    min-height: 1em;
+    line-height: 45px;
+    margin: 0;
+    padding: 0 2.66666667em;
+    font-size: .9375rem;
+    border-radius: 0;
+    color: #fff;
+    background-color: #50af31;
+    text-transform: uppercase;
+    transition: all .6s ease, background-color .6s ease-in-out, color .3s ease-in-out;
+}
+
+.primaryBtn:hover {
+    background-color: #111;
+    color: #fff;
+}

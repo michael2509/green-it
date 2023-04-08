@@ -29,24 +29,6 @@
 }
 
 .bannerBtn {
-    cursor: pointer;
-    display: inline-block;
-    vertical-align: middle;
-    outline: 0;
-    border: 0;
-    font-style: normal;
-    text-align: center;
-    text-decoration: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    min-height: 1em;
-    line-height: 45px;
-    margin: 0;
-    padding: 0 2.66666667em;
-    font-size: .9375rem;
-    border-radius: 0;
-    color: #fff;
-    background-color: #50af31;
-    text-transform: uppercase;
     position: absolute;
     top: 300px;
     right: 70px;
@@ -95,8 +77,35 @@ h2 {
 
 .popularCarName {
     font-size: 20px;
+    font-weight: 700;
 }
 
 .popularCarOption {
     font-size: 15px;
+    color: #666666;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 20px auto;
+    color: #50af31;
+}
+
+.popularCarInfo {
+    display: flex;
+}
+
+.popularCarInfo span {
+    width: 50%;
+    margin-bottom: 8px;
+}
+
+.label {
+    color: #666666;
+}
+
+.value {
+    color: #111;
+    font-weight: 700;
 }
