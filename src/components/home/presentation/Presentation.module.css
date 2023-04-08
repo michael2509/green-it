@@ -1,10 +1,7 @@
 .section {
     width: 1170px;
-    margin: 40px auto 60px;
-}
-
-h2 {
-    margin-bottom: 25px;
+    margin: auto;
+    padding-bottom: 80px;
 }
 
 p {

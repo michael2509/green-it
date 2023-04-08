@@ -1,7 +1,13 @@
 import type { Component } from "solid-js";
 import styles from "./Button.module.css";
 
-const Button: Component = (props: any) => {
+interface ButtonProps {
+    linkTo?: string;
+    rounded?: boolean;
+    children: string;
+}
+
+const Button: Component<ButtonProps> = (props: ButtonProps) => {
     const button = (
         <button class={`${styles.primaryBtn} ${props.rounded ? styles.rounded : ''}`}>
             {props.children}
