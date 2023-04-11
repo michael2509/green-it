@@ -1,6 +1,8 @@
 import { Component } from "solid-js";
 import styles from "./PopularCars.module.css";
-import carOne from "../../../assets/images/popular-car-one.avif";
+import berlingoImg from "../../../assets/cars/berlingo1.avif";
+import mercoImg from "../../../assets/cars/mercedes1.avif";
+import audiImg from "../../../assets/cars/audi1.avif";;
 import Button from "../../button/Button";
 
 interface PopularCar {
@@ -19,36 +21,36 @@ const PopularCars: Component = () => {
     const popularCars: PopularCar[] = [
         {
             id: 1,
-            name: "Citroën C5 Aircross",
-            option: "bluehdi 180 s&amp;s eat8 Shine",
-            price: "23 990 €",
-            circulation: "05.2019",
-            km: "88 115 km",
+            name: "Peugeot Partner Fourgon",
+            option: "STANDARD 650 KG BLUEHDI 75 BVM5 PREMIUM",
+            price: "19 990 €",
+            circulation: "2019",
+            km: "10 671 km",
             fuel: "Diesel",
-            transmission: "automatique",
-            imgPath: carOne
+            transmission: "Manuelle",
+            imgPath: berlingoImg
         },
         {
             id: 2,
-            name: "Citroën C5 Aircross",
-            option: "bluehdi 180 s&amp;s eat8 Shine",
-            price: "23 990 €",
-            circulation: "05.2019",
-            km: "88 115 km",
+            name: "Mercedes-Benz classe B",
+            option: "180 D 7G-DCT STYLE LINE EDITION",
+            price: "25 990 €",
+            circulation: "2020",
+            km: "61 604 km",
             fuel: "Diesel",
-            transmission: "automatique",
-            imgPath: carOne
+            transmission: "Automatique",
+            imgPath: mercoImg
         },
         {
             id: 3,
-            name: "Citroën C5 Aircross",
-            option: "bluehdi 180 s&amp;s eat8 Shine",
-            price: "23 990 €",
-            circulation: "05.2019",
-            km: "88 115 km",
-            fuel: "Diesel",
-            transmission: "automatique",
-            imgPath: carOne
+            name: "Audi A1 Sportback Business",
+            option: "A1 SPORTBACK 1.4 TFSI 122 BUSINESS LINE",
+            price: "13 990 €",
+            circulation: "2014",
+            km: "114 088 km",
+            fuel: "Essence",
+            transmission: "Automatique",
+            imgPath: audiImg
         }
     ]
 

@@ -4,12 +4,13 @@ import styles from "./Button.module.css";
 interface ButtonProps {
     linkTo?: string;
     rounded?: boolean;
+    small?: boolean;
     children: string;
 }
 
 const Button: Component<ButtonProps> = (props: ButtonProps) => {
     const button = (
-        <button class={`${styles.primaryBtn} ${props.rounded ? styles.rounded : ''}`}>
+        <button class={`${styles.primaryBtn} ${props.rounded ? styles.rounded : ''} ${props.small ? styles.small : ''}`}>
             {props.children}
         </button>
     );
