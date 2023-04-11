@@ -35,6 +35,7 @@ h2 {
 
 .popularCar img {
     width: 100%;
+    height: auto;
 }
 
 .popularCarSection h2 {

@@ -17,7 +17,7 @@ const Brands: Component = () => {
             <div class={styles.gridContainer}>
                 {brands.map(brand => (
                     <div class={styles.gridItem}>
-                        <img src={brand.imgPath} alt={brand.name} />
+                        <img src={brand.imgPath} width={179} height={119} alt={brand.name} />
                         <p class="caption">Voitures {brand.name}</p>
                     </div>
                 ))}

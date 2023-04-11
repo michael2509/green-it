@@ -1,7 +1,7 @@
 import { Component, createSignal } from "solid-js";
 import styles from "./Banner.module.css";
-import banner from "../../../assets/images/home-banner-desktop.webp";
-import bannerMobile from "../../../assets/images/home-banner-mobile.avif";
+import banner from "../../../assets/home_banner/home-banner-desktop.webp";
+import bannerMobile from "../../../assets/home_banner/home-banner-mobile.avif";
 import Button from "../../button/Button";
 
 const Banner: Component = () => {
@@ -25,7 +25,7 @@ const Banner: Component = () => {
             </span>
             <picture>
                 <source class={styles.bannerImg} srcset={bannerMobile} media="(max-width: 768px)"></source>
-                <img class={styles.bannerImg} src={banner} alt="MDN" />
+                <img class={styles.bannerImg} width='1536' height='439' src={banner} alt="MDN" />
             </picture>
         </header>
     );

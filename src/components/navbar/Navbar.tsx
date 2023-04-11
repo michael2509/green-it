@@ -1,12 +1,12 @@
 import { Component } from "solid-js";
 import styles from "./Navbar.module.css";
-import brandLogo from "../../assets/chopard-logo.webp";
+import brandLogo from "../../assets/chopard-logo.avif";
 
 const Navbar: Component = () => {
   return (
     <nav class={styles.Navbar}>
       <a href="/">
-        <img src={brandLogo} alt="Chopard Logo" />
+        <img src={brandLogo} width={200} height={53} alt="Chopard Logo" />
       </a>
       <ul class={styles.NavbarList}>
         <li>
