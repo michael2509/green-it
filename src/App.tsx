@@ -3,10 +3,10 @@ import { Route, Routes } from "@solidjs/router";
 import Footer from "./components/footer/Footer";
 
 import Navbar from "./components/navbar/Navbar";
-import Car from "./components/car/Car";
 
 const App: Component = () => {
   const Home = lazy(() => import("./components/home/Home"));
+  const Car = lazy(() => import("./components/car/Car"));
 
   return (
     <>

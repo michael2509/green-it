@@ -19,22 +19,22 @@ const Footer: Component = () => {
                             <ul class={styles.socialMediaList}>
                                 <li>
                                     <a class={styles.socialMediaIcon}>
-                                        <img class={styles.iconImg} src={facebookIcon} alt="logo" />
+                                        <img class={styles.iconImg} width={16} height={16} src={facebookIcon} alt="logo" />
                                     </a>
                                 </li>
                                 <li>
                                     <a class={styles.socialMediaIcon}>
-                                        <img class={styles.iconImg} src={linkedinIcon} alt="logo" />
+                                        <img class={styles.iconImg} width={16} height={16} src={linkedinIcon} alt="logo" />
                                     </a>
                                 </li>
                                 <li>
                                     <a class={styles.socialMediaIcon}>
-                                        <img class={styles.iconImg} src={instagramIcon} alt="logo" />
+                                        <img class={styles.iconImg} width={16} height={16} src={instagramIcon} alt="logo" />
                                     </a>
                                 </li>
                                 <li>
                                     <a class={styles.socialMediaIcon}>
-                                        <img class={styles.iconImg} src={twitterIcon} alt="logo" />
+                                        <img class={styles.iconImg} width={16} height={16} src={twitterIcon} alt="logo" />
                                     </a>
                                 </li>
                             </ul>
