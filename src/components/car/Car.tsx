@@ -30,7 +30,7 @@ const Car: Component = () => {
             price: 19990,
             isManual: true,
             isGasoil: true,
-            images: ["berlingo1.avif", "berlingo2.avif", "berlingo3.avif"],
+            images: ["berlingo1.webp", "berlingo2.webp", "berlingo3.webp"],
         },
         {
             id: 2,
@@ -41,7 +41,7 @@ const Car: Component = () => {
             price: 25990,
             isManual: false,
             isGasoil: true,
-            images: ["mercedes1.avif", "mercedes2.avif", "mercedes3.avif"],
+            images: ["mercedes1.webp", "mercedes2.webp", "mercedes3.webp"],
         },
         {
             id: 3,
@@ -52,7 +52,7 @@ const Car: Component = () => {
             price: 13990,
             isManual: false,
             isGasoil: false,
-            images: ["audi1.avif", "audi2.avif", "audi3.avif"],
+            images: ["audi1.webp", "audi2.webp", "audi3.webp"],
         },
     ]);
 
@@ -94,7 +94,7 @@ const Car: Component = () => {
                         <img
                             width={"100%"}
                             height={"100%"}
-                            loading="lazy"
+                            loading="eager"
                             src={`/src/assets/cars/${car()?.images[0]}`}
                             alt={car()?.name}
                             class={styles.carImage}
@@ -102,7 +102,7 @@ const Car: Component = () => {
                         <img
                             width={"100%"}
                             height={"100%"}
-                            loading="lazy"
+                            loading="eager"
                             src={`/src/assets/cars/${car()?.images[1]}`}
                             alt={car()?.name}
                             class={styles.carImage}
@@ -110,7 +110,7 @@ const Car: Component = () => {
                         <img
                             width={"100%"}
                             height={"100%"}
-                            loading="lazy"
+                            loading="eager"
                             src={`/src/assets/cars/${car()?.images[2]}`}
                             alt={car()?.name}
                             class={styles.carImage}
