@@ -1,8 +1,8 @@
 import type { Component } from "solid-js";
-import facebookIcon from "../../assets/icons/facebook-icon.webp";
-import instagramIcon from "../../assets/icons/instagram-icon.webp";
-import linkedinIcon from "../../assets/icons/linkedin-icon.webp";
-import twitterIcon from "../../assets/icons/twitter-icon.webp";
+import facebookIcon from "../../assets/icons/facebook-icon.svg";
+import instagramIcon from "../../assets/icons/instagram-icon.svg";
+import linkedinIcon from "../../assets/icons/linkedin-icon.svg";
+import twitterIcon from "../../assets/icons/twitter-icon.svg";
 import styles from "./Footer.module.css";
 
 const Footer: Component = () => {
