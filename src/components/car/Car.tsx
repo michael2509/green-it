@@ -1,21 +1,27 @@
 import { useParams } from "@solidjs/router";
-import { Component, createMemo, createSignal } from "solid-js";
+import { Component, Suspense, createMemo, createSignal, lazy } from "solid-js";
+import "solid-slider/slider.css";
+import { Slider, SliderButton, SliderProvider } from "solid-slider";
 import styles from "./Car.module.css";
+import arrow from "../../assets/svg/arrow.svg";
+import CarDetails from "../carDetails/CarDetails";
+
+interface ICar {
+  id: number;
+  name: string;
+  shortDescription: string;
+  year: number;
+  kilometer: number;
+  price: number;
+  isManual: boolean;
+  isGasoil: boolean;
+  conso: number;
+  images: Array<string>;
+}
 
 const Car: Component = () => {
   const params = useParams();
-
-  interface ICar {
-    id: number;
-    name: string;
-    shortDescription: string;
-    year: number;
-    kilometer: number;
-    price: number;
-    isManual: boolean;
-    isGasoil: boolean;
-    images: Array<string>;
-  }
+  const CarDevis = lazy(() => import("../carDevis/CarDevis"));
 
   const cars = createMemo(() => [
     {
@@ -27,6 +33,7 @@ const Car: Component = () => {
       price: 19990,
       isManual: true,
       isGasoil: true,
+      conso: 6.4,
       images: ["berlingo1.avif", "berlingo2.avif", "berlingo3.avif"],
     },
     {
@@ -38,6 +45,7 @@ const Car: Component = () => {
       price: 25990,
       isManual: false,
       isGasoil: true,
+      conso: 5.8,
       images: ["mercedes1.avif", "mercedes2.avif", "mercedes3.avif"],
     },
     {
@@ -49,6 +57,7 @@ const Car: Component = () => {
       price: 13990,
       isManual: false,
       isGasoil: false,
+      conso: 7.2,
       images: ["audi1.avif", "audi2.avif", "audi3.avif"],
     },
   ]);
@@ -74,6 +83,9 @@ const Car: Component = () => {
     );
   }
 
+  // Create a state "current section selected"
+  const [currentSection, setCurrentSection] = createSignal("details");
+
   return (
     <>
       <section
@@ -84,12 +96,48 @@ const Car: Component = () => {
           "align-items": "center",
         }}
       >
-        {/* TODO 🛠️: Use a optimized carousel to display all images WITH LAZY LOADING!! */}
-        <img
-          src={`/src/assets/cars/${car()?.images[0]}`}
-          alt={car()?.name}
-          class={styles.carImage}
-        />
+        <SliderProvider>
+          <SliderButton prev>
+            <img
+              src={arrow}
+              alt="previous image"
+              width="16px"
+              height="16px"
+              style={{ transform: "rotate(-90deg)" }}
+              class={styles.buttonSlider}
+            />
+          </SliderButton>
+          <Slider options={{ loop: true }}>
+            <img
+              loading="lazy"
+              src={`/src/assets/cars/${car()?.images[0]}`}
+              alt={car()?.name}
+              class={styles.carImage}
+            />
+            <img
+              loading="lazy"
+              src={`/src/assets/cars/${car()?.images[1]}`}
+              alt={car()?.name}
+              class={styles.carImage}
+            />
+            <img
+              loading="lazy"
+              src={`/src/assets/cars/${car()?.images[2]}`}
+              alt={car()?.name}
+              class={styles.carImage}
+            />
+          </Slider>
+          <SliderButton next>
+            <img
+              src={arrow}
+              alt="next image"
+              width="16px"
+              height="16px"
+              style={{ transform: "rotate(90deg)" }}
+              class={styles.buttonSlider}
+            />
+          </SliderButton>
+        </SliderProvider>
         <article class={styles.carDetails}>
           <h1>{car()?.name}</h1>
 
@@ -101,9 +149,36 @@ const Car: Component = () => {
         </article>
       </section>
       <section class={styles.carBreadcrumbs}>
-        <button class={styles.carBreadcrumbsButton}>Plus d'infos</button>
-        <button class={styles.carBreadcrumbsButton}>Demande de devis</button>
+        <button
+          onClick={() => setCurrentSection("details")}
+          class={
+            currentSection() === "details"
+              ? styles.carBreadcrumbsButtonSelected
+              : styles.carBreadcrumbsButton
+          }
+        >
+          Plus d'infos
+        </button>
+        <button
+          onClick={() => setCurrentSection("devis")}
+          class={
+            currentSection() === "devis"
+              ? styles.carBreadcrumbsButtonSelected
+              : styles.carBreadcrumbsButton
+          }
+        >
+          Demande de devis
+        </button>
       </section>
+      {currentSection() === "details" && <CarDetails car={car()} />}
+
+      {currentSection() === "devis" && (
+        <Suspense
+          fallback={<span class={styles.spanLoading}>Chargement...</span>}
+        >
+          <CarDevis />
+        </Suspense>
+      )}
     </>
   );
 };

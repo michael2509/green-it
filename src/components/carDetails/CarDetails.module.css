@@ -1,0 +1,45 @@
+.carDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.carDetails h2 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.spanInfoLeft {
+    color: #666;
+}
+
+.spanInfoRight {
+    color: #111;
+}
+
+.ulInfos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 40%;
+}
+
+.ulInfos li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 0;
+}
+
+.ulInfos li:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+    
+}

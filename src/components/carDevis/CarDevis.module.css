@@ -1,0 +1,40 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+.formSpan {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 1rem;
+    margin-bottom: 1rem;
+}
+.formSpan label{
+    text-align: right;
+}
+.formButton, .formButtonDisabled {
+    border: none;
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.formButtonDisabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+    .formGroup {
+    grid-template-columns: 1fr;
+    }
+}
