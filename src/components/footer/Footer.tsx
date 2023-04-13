@@ -46,7 +46,7 @@ const Footer: Component = () => {
                 </div>
                 <div class={styles.externalLinks}>
                     <a href="http://www.gforces.co.uk/">NetDirector®</a>
-                    <span> - </span>
+                    <span class={styles.separator}> - </span>
                     <a href="https://www.datacar-digital.com/"> Automotive Ecommerce intégré par Datafirst</a>
                 </div>
             </div>

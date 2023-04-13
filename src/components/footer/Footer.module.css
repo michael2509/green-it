@@ -67,7 +67,13 @@ footer span {
         margin-bottom: 20px;
     }
 
-    a {
+    .separator {
+        display: none;
+    }
+
+    .externalLinks a {
+        display: block;
         padding: 20px;
+        margin: 0;
     }
 }
