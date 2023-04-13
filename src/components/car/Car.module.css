@@ -32,7 +32,7 @@ section {
 }
 
 .carPrice {
-    color: var(--main-color);;
+    color: var(--main-color);
     font-size: 1.2em;
 }
 
@@ -42,7 +42,6 @@ section {
 }
 
 .carBreadcrumbsButton, .carBreadcrumbsButtonSelected {
-    /* background: var(--main-color); */
     color: black;
     border: none;
     padding: 10px;

@@ -6,15 +6,15 @@ import { Slider, SliderButton, SliderProvider } from "solid-slider";
 import styles from "./Car.module.css";
 import arrow from "../../assets/svg/arrow.svg";
 import CarDetails from "../carDetails/CarDetails";
-import berlingo1 from "../../assets/cars/berlingo1.webp";
-import berlingo2 from "../../assets/cars/berlingo2.webp";
-import berlingo3 from "../../assets/cars/berlingo3.webp";
-import mercedes1 from "../../assets/cars/mercedes1.webp";
-import mercedes2 from "../../assets/cars/mercedes2.webp";
-import mercedes3 from "../../assets/cars/mercedes3.webp";
-import audi1 from "../../assets/cars/audi1.webp";
-import audi2 from "../../assets/cars/audi2.webp";
-import audi3 from "../../assets/cars/audi3.webp";
+import berlingo1 from "../../assets/cars/berlingo1.avif";
+import berlingo2 from "../../assets/cars/berlingo2.avif";
+import berlingo3 from "../../assets/cars/berlingo3.avif";
+import mercedes1 from "../../assets/cars/mercedes1.avif";
+import mercedes2 from "../../assets/cars/mercedes2.avif";
+import mercedes3 from "../../assets/cars/mercedes3.avif";
+import audi1 from "../../assets/cars/audi1.avif";
+import audi2 from "../../assets/cars/audi2.avif";
+import audi3 from "../../assets/cars/audi3.avif";
 
 interface ICar {
   id: number;
