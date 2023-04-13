@@ -66,4 +66,8 @@ footer span {
         text-align: left;
         margin-bottom: 20px;
     }
+
+    a {
+        padding: 20px;
+    }
 }

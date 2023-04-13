@@ -1,6 +1,7 @@
 import { useParams } from "@solidjs/router";
 import { Component, createMemo, createSignal } from "solid-js";
 import styles from "./Car.module.css";
+import { Meta } from "@solidjs/meta";
 
 const Car: Component = () => {
   const params = useParams();
@@ -76,6 +77,7 @@ const Car: Component = () => {
 
   return (
     <>
+      <Meta name="description" content={car()?.shortDescription} />
       <section
         class={styles.carSection}
         style={{
