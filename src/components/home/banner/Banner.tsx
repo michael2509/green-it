@@ -15,7 +15,7 @@ const Banner: Component = () => {
 
     return (
         <header class={styles.header}>
-            <span class={styles.bannerTitle}>CONCESSIONNAIRE AUTOMOBILE</span>
+            <h1 class={styles.bannerTitle}>CONCESSIONNAIRE AUTOMOBILE</h1>
             {!isSmallScreen() && (
                 <>
                     <span class={styles.bannerSubTitle1}>Offres de voitures neuves ou d'occasions</span>
