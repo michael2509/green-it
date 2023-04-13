@@ -7,7 +7,7 @@ const Navbar: Component = () => {
   return (
     <nav class={styles.Navbar}>
       <A href="/">
-        <img src={brandLogo} width="188" height="50" alt="Chopard Logo" />
+        <img src={brandLogo} width="282" height="75" alt="Chopard Logo" />
       </A>
       <ul class={styles.NavbarList}>
         <li>
