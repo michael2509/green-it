@@ -37,7 +37,7 @@ jobs:
           CI: true
           SITE_URL: ${{ inputs.site-url }}
         run: |
-          npm install --global pnpm
+          npm install --global pnpm@7.29.1
           pnpm install
           pnpm build
 
