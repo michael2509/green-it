@@ -6,6 +6,15 @@ import { Slider, SliderButton, SliderProvider } from "solid-slider";
 import styles from "./Car.module.css";
 import arrow from "../../assets/svg/arrow.svg";
 import CarDetails from "../carDetails/CarDetails";
+import berlingo1 from "../../assets/cars/berlingo1.webp";
+import berlingo2 from "../../assets/cars/berlingo2.webp";
+import berlingo3 from "../../assets/cars/berlingo3.webp";
+import mercedes1 from "../../assets/cars/mercedes1.webp";
+import mercedes2 from "../../assets/cars/mercedes2.webp";
+import mercedes3 from "../../assets/cars/mercedes3.webp";
+import audi1 from "../../assets/cars/audi1.webp";
+import audi2 from "../../assets/cars/audi2.webp";
+import audi3 from "../../assets/cars/audi3.webp";
 
 interface ICar {
   id: number;
@@ -35,7 +44,7 @@ const Car: Component = () => {
       isManual: true,
       isGasoil: true,
       conso: 6.4,
-      images: ["berlingo1.webp", "berlingo2.webp", "berlingo3.webp"],
+      images: [berlingo1, berlingo2, berlingo3],
     },
     {
       id: 2,
@@ -47,7 +56,7 @@ const Car: Component = () => {
       isManual: false,
       isGasoil: true,
       conso: 5.8,
-      images: ["mercedes1.webp", "mercedes2.webp", "mercedes3.webp"],
+      images: [mercedes1, mercedes2, mercedes3],
     },
     {
       id: 3,
@@ -59,7 +68,7 @@ const Car: Component = () => {
       isManual: false,
       isGasoil: false,
       conso: 7.2,
-      images: ["audi1.webp", "audi2.webp", "audi3.webp"],
+      images: [audi1, audi2, audi3],
     },
   ]);
 
@@ -98,7 +107,7 @@ const Car: Component = () => {
               loading="lazy"
               width="100%"
               height="100%"
-              src={`/src/assets/cars/${car()?.images[0]}`}
+              src={car()?.images[0]}
               alt={car()?.name}
               class={styles.carImage}
             />
@@ -106,7 +115,7 @@ const Car: Component = () => {
               loading="lazy"
               width="100%"
               height="100%"
-              src={`/src/assets/cars/${car()?.images[1]}`}
+              src={car()?.images[1]}
               alt={car()?.name}
               class={styles.carImage}
             />
@@ -114,7 +123,7 @@ const Car: Component = () => {
               loading="lazy"
               width="100%"
               height="100%"
-              src={`/src/assets/cars/${car()?.images[2]}`}
+              src={car()?.images[2]}
               alt={car()?.name}
               class={styles.carImage}
             />
