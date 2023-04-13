@@ -14,6 +14,7 @@
 .gridItem img {
     display: block;
     width: 100%;
+    height: auto;
 }
 
 .caption {
@@ -37,7 +38,7 @@
     .gridContainer {
         grid-template-columns: repeat(auto-fit, minmax(33.33%, 1fr));
         grid-gap: 10px;
-        width: 100%;
+        width: 66%;
     }
 }
 
@@ -45,5 +46,6 @@
     .gridContainer {
         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
         grid-gap: 10px;
+        width: 50%;
     }
 }

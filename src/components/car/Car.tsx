@@ -1,4 +1,5 @@
 import { useParams } from "@solidjs/router";
+import { Meta } from "@solidjs/meta";
 import { Component, Suspense, createMemo, createSignal, lazy } from "solid-js";
 import "solid-slider/slider.css";
 import { Slider, SliderButton, SliderProvider } from "solid-slider";
@@ -67,27 +68,12 @@ const Car: Component = () => {
     cars().find((car: ICar) => car.id === parseInt(params.id))
   );
 
-  if (!car()) {
-    return (
-      <h1
-        style={{
-          display: "flex",
-          "justify-content": "center",
-          height: "75vh",
-          "align-items": "center",
-          "margin-top": "-100px",
-        }}
-      >
-        Aucun véhicule trouvé 🤷‍♂️
-      </h1>
-    );
-  }
-
   // Create a state "current section selected"
   const [currentSection, setCurrentSection] = createSignal("details");
 
   return (
     <>
+      <Meta name="description" content={car()?.shortDescription} />
       <section
         class={styles.carSection}
         style={{
@@ -110,18 +96,24 @@ const Car: Component = () => {
           <Slider options={{ loop: true }}>
             <img
               loading="lazy"
+              width="100%"
+              height="100%"
               src={`/src/assets/cars/${car()?.images[0]}`}
               alt={car()?.name}
               class={styles.carImage}
             />
             <img
               loading="lazy"
+              width="100%"
+              height="100%"
               src={`/src/assets/cars/${car()?.images[1]}`}
               alt={car()?.name}
               class={styles.carImage}
             />
             <img
               loading="lazy"
+              width="100%"
+              height="100%"
               src={`/src/assets/cars/${car()?.images[2]}`}
               alt={car()?.name}
               class={styles.carImage}

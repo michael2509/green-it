@@ -26,6 +26,7 @@
 
 .bannerImg {
     width: 100%;
+    height: auto;
 }
 
 .bannerBtn {
@@ -34,7 +35,7 @@
     right: 70px;
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 768px) {
     .bannerTitle {
         top: 150px;
         font-size: 22px;
@@ -54,5 +55,19 @@
         top: 260px;
         right: 20px;
         height: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .bannerTitle {
+        top: 120px;
+        left: 20px;
+        font-size: 24px;
+    }
+
+    .bannerBtn {
+        left: 50%;
+        bottom: 80px;
+        transform: translateX(-50%);
     }
 }

@@ -1,8 +1,8 @@
 import { Component } from "solid-js";
 import styles from "./PopularCars.module.css";
-import berlingoImg from "../../../assets/cars/berlingo1.avif";
-import mercoImg from "../../../assets/cars/mercedes1.avif";
-import audiImg from "../../../assets/cars/audi1.avif";;
+import berlingoImg from "../../../assets/popular_cars/berlingo.avif";
+import mercoImg from "../../../assets/popular_cars/mercedes.avif";
+import audiImg from "../../../assets/popular_cars/audi.avif";;
 import Button from "../../button/Button";
 
 interface PopularCar {
@@ -61,7 +61,7 @@ const PopularCars: Component = () => {
                 {popularCars.map(car => (
                     <div class={styles.popularCar}>
                         <picture>
-                            <img src={car.imgPath} alt={car.name} />
+                            <img src={car.imgPath} width={400} height={300} alt={car.name} />
                         </picture>
                         <div class={styles.popularCarContent}>
                             <p class={styles.popularCarName}>{car.name}</p>

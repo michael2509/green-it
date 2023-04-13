@@ -1,8 +1,8 @@
 import type { Component } from "solid-js";
-import facebookIcon from "../../assets/images/facebook-icon.webp";
-import instagramIcon from "../../assets/images/instagram-icon.webp";
-import linkedinIcon from "../../assets/images/linkedin-icon.webp";
-import twitterIcon from "../../assets/images/twitter-icon.webp";
+import facebookIcon from "../../assets/icons/facebook-icon.svg";
+import instagramIcon from "../../assets/icons/instagram-icon.svg";
+import linkedinIcon from "../../assets/icons/linkedin-icon.svg";
+import twitterIcon from "../../assets/icons/twitter-icon.svg";
 import styles from "./Footer.module.css";
 
 const Footer: Component = () => {
@@ -18,23 +18,23 @@ const Footer: Component = () => {
                         <div class={styles.carDealerSocialMedia}>
                             <ul class={styles.socialMediaList}>
                                 <li>
-                                    <a class={styles.socialMediaIcon}>
-                                        <img class={styles.iconImg} src={facebookIcon} alt="logo" />
+                                    <a href="https://fr-fr.facebook.com/groupe.chopard" class={styles.socialMediaIcon}>
+                                        <img class={styles.iconImg} width={16} height={16} src={facebookIcon} alt="logo" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a class={styles.socialMediaIcon}>
-                                        <img class={styles.iconImg} src={linkedinIcon} alt="logo" />
+                                    <a href="https://www.linkedin.com/company/groupe-chopard/" class={styles.socialMediaIcon}>
+                                        <img class={styles.iconImg} width={16} height={16} src={linkedinIcon} alt="logo" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a class={styles.socialMediaIcon}>
-                                        <img class={styles.iconImg} src={instagramIcon} alt="logo" />
+                                    <a href="https://www.instagram.com/groupe.chopard/" class={styles.socialMediaIcon}>
+                                        <img class={styles.iconImg} width={16} height={16} src={instagramIcon} alt="logo" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a class={styles.socialMediaIcon}>
-                                        <img class={styles.iconImg} src={twitterIcon} alt="logo" />
+                                    <a href="https://twitter.com/chopardauto/?lang=fr" class={styles.socialMediaIcon}>
+                                        <img class={styles.iconImg} width={16} height={16} src={twitterIcon} alt="logo" />
                                     </a>
                                 </li>
                             </ul>
@@ -46,7 +46,7 @@ const Footer: Component = () => {
                 </div>
                 <div class={styles.externalLinks}>
                     <a href="http://www.gforces.co.uk/">NetDirector®</a>
-                    <span> - </span>
+                    <span class={styles.separator}> - </span>
                     <a href="https://www.datacar-digital.com/"> Automotive Ecommerce intégré par Datafirst</a>
                 </div>
             </div>

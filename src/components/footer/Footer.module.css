@@ -42,6 +42,8 @@
 .iconImg {
     height: 16px;
     width: 16px;
+    position: relative;
+    top: 2px;
 }
 
 footer p,
@@ -65,5 +67,15 @@ footer span {
     .carDealerPresentation {
         text-align: left;
         margin-bottom: 20px;
+    }
+
+    .separator {
+        display: none;
+    }
+
+    .externalLinks a {
+        display: block;
+        padding: 20px;
+        margin: 0;
     }
 }

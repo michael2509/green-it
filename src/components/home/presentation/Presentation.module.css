@@ -7,3 +7,20 @@
 p {
     margin-bottom: 16px;
 }
+
+.videoContainer img,
+.videoContainer iframe {
+    display: block;
+    margin: 40px auto 0;
+    cursor: pointer;
+}
+
+/* responsive iframe media query (below 768px */
+@media screen and (max-width: 768px) {
+
+    .videoContainer img,
+    .videoContainer iframe {
+        width: 100%;
+        height: auto;
+    }
+}

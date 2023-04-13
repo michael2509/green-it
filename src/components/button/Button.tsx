@@ -1,5 +1,6 @@
 import type { Component } from "solid-js";
 import styles from "./Button.module.css";
+import { A } from "@solidjs/router";
 
 interface ButtonProps {
     linkTo?: string;
@@ -15,7 +16,7 @@ const Button: Component<ButtonProps> = (props: ButtonProps) => {
         </button>
     );
 
-    const buttonOrLink = props.linkTo ? <a href={props.linkTo}>{button}</a> : button;
+    const buttonOrLink = props.linkTo ? <A href={props.linkTo}>{button}</A> : button;
 
     return buttonOrLink;
 };

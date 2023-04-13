@@ -1,14 +1,20 @@
 import { Component } from "solid-js";
 import styles from "./Brands.module.css";
+import peugeotImg from "../../../assets/brands/desktop_logo_peugeot.webp";
+import mercedesImg from "../../../assets/brands/desktop_logo_mercedes.webp";
+import citroenImg from "../../../assets/brands/desktop_logo_citroen.webp";
+import dsImg from "../../../assets/brands/desktop_logo_ds.webp";
+import renaultImg from "../../../assets/brands/desktop_logo_renault.webp";
+import opelImg from "../../../assets/brands/desktop_logo_opel.webp";
 
 const Brands: Component = () => {
     const brands = [
-        { name: "Peugeot", imgPath: "/src/assets/brands/desktop_logo_peugeot.webp" },
-        { name: "Mercedes-Benz", imgPath: "/src/assets/brands/desktop_logo_mercedes.webp" },
-        { name: "Citroën", imgPath: "/src/assets/brands/desktop_logo_citroen.webp" },
-        { name: "DS Automobiles", imgPath: "/src/assets/brands/desktop_logo_ds.webp" },
-        { name: "Renault", imgPath: "/src/assets/brands/desktop_logo_renault.webp" },
-        { name: "Opel", imgPath: "/src/assets/brands/desktop_logo_opel.webp" },
+        { name: "Peugeot", imgPath: peugeotImg },
+        { name: "Mercedes-Benz", imgPath: mercedesImg },
+        { name: "Citroën", imgPath: citroenImg },
+        { name: "DS Automobiles", imgPath: dsImg },
+        { name: "Renault", imgPath: renaultImg },
+        { name: "Opel", imgPath: opelImg }
     ]
 
     return (
@@ -17,7 +23,7 @@ const Brands: Component = () => {
             <div class={styles.gridContainer}>
                 {brands.map(brand => (
                     <div class={styles.gridItem}>
-                        <img src={brand.imgPath} alt={brand.name} />
+                        <img src={brand.imgPath} width={179} height={119} alt={brand.name} />
                         <p class="caption">Voitures {brand.name}</p>
                     </div>
                 ))}
