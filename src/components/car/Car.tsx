@@ -92,18 +92,24 @@ const Car: Component = () => {
                     <SliderButton prev>Previous</SliderButton>
                     <Slider options={{ loop: true }}>
                         <img
+                            width={"100%"}
+                            height={"100%"}
                             loading="lazy"
                             src={`/src/assets/cars/${car()?.images[0]}`}
                             alt={car()?.name}
                             class={styles.carImage}
                         />
                         <img
+                            width={"100%"}
+                            height={"100%"}
                             loading="lazy"
                             src={`/src/assets/cars/${car()?.images[1]}`}
                             alt={car()?.name}
                             class={styles.carImage}
                         />
                         <img
+                            width={"100%"}
+                            height={"100%"}
                             loading="lazy"
                             src={`/src/assets/cars/${car()?.images[2]}`}
                             alt={car()?.name}
