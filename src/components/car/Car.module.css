@@ -43,7 +43,7 @@ section {
 
 .carBreadcrumbsButton, .carBreadcrumbsButtonSelected {
     /* background: var(--main-color); */
-    color: white;
+    color: black;
     border: none;
     padding: 10px;
     border-radius: 5px;
@@ -54,6 +54,7 @@ section {
 
 .carBreadcrumbsButtonSelected {
     background: var(--main-color);
+    color: white;
 }
 
 .buttonSlider {

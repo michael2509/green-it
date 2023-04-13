@@ -4,7 +4,7 @@ const CarDetails = (car: any) => {
   return (
     <section style={{ padding: "0 30px" }}>
       <div class={styles.carDetails}>
-        <h2>Informations sur le véhicule</h2>
+        <span class={styles.carInfos}>Informations sur le véhicule</span>
         <div
           style={{
             display: "flex",
