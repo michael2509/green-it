@@ -45,8 +45,7 @@ jobs:
         run: |
           echo "RewriteEngine on" > dist/.htaccess
           echo "RewriteCond %{REQUEST_FILENAME} !-f" >> dist/.htaccess
-          echo "RewriteCond %{REQUEST_FILENAME} !-d" >> dist/.htaccess
-          echo "RewriteRule ^(.*)$ index.html [L]" >> dist/.htaccess
+          echo "RewriteRule ^ index.html [QSA,L]" >> dist/.htaccess
 
 # Please do not touch the following action
       - name: Store deployment content
